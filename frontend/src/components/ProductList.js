@@ -7,7 +7,7 @@ const ProductList = ({ products }) => {
       <ul className="list-group">
         {products.map((product) => (
           <li key={product.id} className="list-group-item">
-            <strong>{product.title}</strong> - ${product.price} <br />
+            <strong>{product.title}</strong> - ₹{product.price} <br />
             <span className="text-muted">
               Category: {product.category.name}
             </span>{" "}

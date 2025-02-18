@@ -12,9 +12,9 @@ class ScraperService
     response = HTTParty.get(url)
     parsed_page = Nokogiri::HTML(response.body)
 
-    title = parsed_page.at_css('span.B_NuCI')&.text || 'Unknown Title'
-    price = parsed_page.at_css('div._30jeq3')&.text&.gsub(/[^\d.]/, '')&.to_f || 0.0
-    category_name = parsed_page.at_css('a._2whKao')&.text || 'Unknown Category'
+    title = parsed_page.at_css('span.VU-ZEz')&.text || 'Unknown Title'
+    price = parsed_page.at_css('div.Nx9bqj')&.text&.gsub(/[^\d.]/, '')&.to_f || 0.0
+    category_name = parsed_page.css('div.r2CdBx')[1]&.text || 'Unknown Category'
 
     category = Category.find_or_create_by(name: category_name)
     product ||= category.products.new(url: url)

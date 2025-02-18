@@ -24,4 +24,6 @@ gem "capybara", "~> 3.40"
 
 gem "dotenv-rails", "~> 3.1"
 
-gem "cors", "~> 1.0"
+gem "rack-cors"
+
+gem 'bootsnap'
