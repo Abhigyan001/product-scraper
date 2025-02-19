@@ -8,6 +8,7 @@ gem 'sidekiq'
 gem 'redis'
 gem 'rack-cors'
 gem 'bootsnap'
+gem 'puma'
 
 group :development, :test do
   gem 'rspec-rails'

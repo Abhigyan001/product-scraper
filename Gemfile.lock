@@ -161,6 +161,8 @@ GEM
       date
       stringio
     public_suffix (6.0.1)
+    puma (6.6.0)
+      nio4r (~> 2.0)
     racc (1.8.1)
     rack (3.1.10)
     rack-cors (2.0.2)
@@ -259,6 +261,7 @@ DEPENDENCIES
   factory_bot_rails
   httparty
   nokogiri
+  puma
   rack-cors
   rails (~> 7.0)
   redis
