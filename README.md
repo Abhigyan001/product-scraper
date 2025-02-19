@@ -1,5 +1,3 @@
-I'll update the README to include RVM and Ruby version installation steps. I'll place these at the beginning of the setup section since they're prerequisites.
-
 # Product Scraper
 A full-stack web application that scrapes product details from e-commerce sites and displays them in a user-friendly interface. Built with **Ruby on Rails** for the backend and **React.js** for the frontend, the app allows users to submit product URLs, store the scraped data in a database, and view products categorized by type.
 
