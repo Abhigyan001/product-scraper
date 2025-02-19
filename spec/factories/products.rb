@@ -1,8 +1,8 @@
 FactoryBot.define do
   factory :product do
-    title { "MyString" }
-    price { "9.99" }
-    url { "MyString" }
-    category { nil }
+    title { "Test Product" }
+    price { 99.99 }
+    url { "https://example.com/product" }
+    category
   end
 end

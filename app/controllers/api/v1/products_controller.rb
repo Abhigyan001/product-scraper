@@ -4,7 +4,12 @@ module Api
       before_action :set_product, only: [:show, :update]
 
       def index
-        @products = Product.includes(:category).all
+        @products = Product.all
+
+        @products.outdated.each do |product|
+          UpdateProductJob.perform_later(product.id)
+        end
+
         render json: @products, include: :category
       end
 
