@@ -4,7 +4,7 @@ A full-stack web application that scrapes product details from e-commerce sites 
 
 ## Features
 - **Web Scraping**: Extract product details (title, price, category) from given URLs.
-- **Database Storage**: Store scraped products in a relational database.
+- **Database Storage**: Store scraped products in SQLite3 database.
 - **Product Listing**: View products grouped by category.
 - **Auto-Update**: Refresh product data if older than one week.
 - **Search & Filter**: Asynchronous search and filtering functionality.
@@ -12,7 +12,7 @@ A full-stack web application that scrapes product details from e-commerce sites 
 ## Tech Stack
 ### **Backend** (Ruby on Rails)
 - Ruby on Rails 7
-- SQLite3 (Development) / PostgreSQL (Production)
+- SQLite3
 - Nokogiri (for web scraping)
 - Sidekiq & Redis (for background jobs)
 - RSpec, FactoryBot, Capybara (for testing)
