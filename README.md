@@ -27,6 +27,10 @@ A full-stack web application that scrapes product details from e-commerce sites 
 
 ## Installation & Setup
 
+### Installation Video
+
+[See Video](https://vimeo.com/1058254737?share=copy)
+
 ### **1. Install RVM (Ruby Version Manager)**
 ```sh
 # Install GPG keys
@@ -87,14 +91,6 @@ rspec  # Run RSpec tests
 cd frontend  # Go to frontend
 npm test  # Run Jest tests
 ```
-
-## API Endpoints
-| Method | Endpoint | Description |
-|--------|------------|-------------|
-| `POST` | `/api/v1/scrape` | Scrape product details from a URL |
-| `GET` | `/api/v1/products` | Retrieve all scraped products, grouped by category |
-| `PUT` | `/api/v1/products/:id` | Update product details |
-| `DELETE` | `/api/v1/products/:id` | Delete a product |
 
 ## Troubleshooting
 - If you get **CORS errors**, ensure the Rails server allows requests from `http://localhost:3001`.

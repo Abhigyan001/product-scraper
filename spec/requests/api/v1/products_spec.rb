@@ -14,7 +14,7 @@ RSpec.describe "Products API", type: :request do
   end
 
   describe "POST /api/v1/products" do
-    let(:valid_attributes) { { title: "New Product", price: 49.99, url: "https://example.com", category_id: category.id } }
+    let(:valid_attributes) { { title: "New Product", price: 49.99, rating: 4.0, image_url: "https://example.com/new_image.jpg", url: "https://example.com", category_id: category.id } }
 
     it "creates a new product" do
       expect {
