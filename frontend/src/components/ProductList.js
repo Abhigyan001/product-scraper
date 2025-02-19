@@ -12,26 +12,31 @@ const groupProductsByCategory = (products) => {
 };
 
 const ProductList = ({ products }) => {
-  const productsByCategory = groupProductsByCategory(products);
+  const sortedProducts = [...products].sort(
+    (a, b) => new Date(b.created_at) - new Date(a.created_at)
+  );
+
+  const productsByCategory = groupProductsByCategory(sortedProducts);
 
   return (
-    <div className="container">
-      <h3>Scraped Products</h3>
+    <div className="mt-4">
+      <h4 className="mb-4">Scraped Products</h4>
       {Object.keys(productsByCategory).map((category) => (
         <div key={category}>
-          <h4>{category}</h4>
+          <h5>{category}</h5>
           <div className="row">
             {productsByCategory[category].map((product) => (
               <div className="col-md-4 mb-4" key={product.id}>
                 <div className="card">
                   <img
-                    src={product.image}
-                    className="card-img-top"
+                    src={product.image_url}
+                    className="card-img-top w-25 mx-auto mt-3"
                     alt={product.title}
                   />
                   <div className="card-body">
-                    <h5 className="card-title">{product.title}</h5>
+                    <h6 className="card-title">{product.title}</h6>
                     <p className="card-text">Price: ₹{product.price}</p>
+                    <p className="card-text">Rating: {product.rating}★</p>
                     <p className="card-text">
                       <small className="text-muted">
                         Category: {product.category.name}

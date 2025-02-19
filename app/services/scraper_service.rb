@@ -15,11 +15,13 @@ class ScraperService
     title = parsed_page.at_css('span.VU-ZEz')&.text || 'Unknown Title'
     price = parsed_page.at_css('div.Nx9bqj')&.text&.gsub(/[^\d.]/, '')&.to_f || 0.0
     category_name = parsed_page.css('div.r2CdBx')[1]&.text || 'Unknown Category'
+    image_url = parsed_page.at_css('img._0DkuPH')&.[]('src')
+    rating = parsed_page.at_css('div.XQDdHH')&.text || 'No Reviews'
 
     category = Category.find_or_create_by(name: category_name)
     product ||= category.products.new(url: url)
 
-    product.update(title: title, price: price)
+    product.update(title: title, price: price, image_url: image_url, rating: rating)
 
     product
   end

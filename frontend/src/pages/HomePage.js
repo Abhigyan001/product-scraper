@@ -45,9 +45,11 @@ const HomePage = () => {
 
   return (
     <div className="container mt-4">
-      <h2 className="mb-4">Product Scraper</h2>
-      <ProductForm onScrape={handleScrape} />
-      <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+      <div className="border border-success rounded bg-dark p-3">
+        <h3 className="mb-4 text-white">Product Scraper</h3>
+        <ProductForm onScrape={handleScrape} />
+        <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+      </div>
       <ProductList products={filteredProducts} />
     </div>
   );
