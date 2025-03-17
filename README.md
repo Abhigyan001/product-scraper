@@ -64,7 +64,6 @@ cd product-scraper
 
 ### **4. Backend Setup**
 ```sh
-cd backend  # Navigate to backend directory
 bundle install  # Install Ruby gems
 rails db:create db:migrate db:seed  # Setup database
 rails server -p 3001 # Start Rails server
