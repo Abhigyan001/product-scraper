@@ -9,6 +9,7 @@ gem 'redis'
 gem 'rack-cors'
 gem 'bootsnap'
 gem 'puma'
+gem 'tzinfo-data'
 
 group :development, :test do
   gem 'rspec-rails'
