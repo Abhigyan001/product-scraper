@@ -9,8 +9,10 @@ class UpdateProductJob < ApplicationJob
 
     if scraped_data
       product.update(
-        title: scraped_data[:title],
-        price: scraped_data[:price],
+        title:     scraped_data[:title],
+        price:     scraped_data[:price],
+        rating:    scraped_data[:rating],
+        image_url: scraped_data[:image_url],
         updated_at: Time.current
       )
     end
