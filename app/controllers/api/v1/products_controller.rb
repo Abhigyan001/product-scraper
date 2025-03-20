@@ -7,7 +7,7 @@ module Api
         @products = Product.all
 
         @products.outdated.each do |product|
-          UpdateProductJob.perform(product.id)
+          UpdateProductJob.perform_later(product.id)
         end
 
         render json: @products, include: :category
